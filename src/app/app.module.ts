@@ -6,7 +6,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {AppComponent} from './app.component';
 import {LayoutComponent} from './layout/layout.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
-import {MoviesComponent} from './components/movies/movies.component';
+import {MoviesComponent} from './shared/components/movies/movies.component';
 import {SharedModule} from './shared/shared.module';
 
 const appRoutes: Routes = [

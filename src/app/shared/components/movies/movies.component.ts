@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Injector, Inject} from '@angular/core';
-import {MovieService} from '../../shared/services/movie.service';
+import {MovieService} from '../../services/movie.service';
 import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
