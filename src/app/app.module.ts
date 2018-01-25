@@ -8,6 +8,7 @@ import {LayoutComponent} from './layout/layout.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {MoviesComponent} from './shared/components/movies/movies.component';
 import {SharedModule} from './shared/shared.module';
+import {SearchModule} from './search/search.module';
 
 const appRoutes: Routes = [
     {path: '', component: MoviesComponent}
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
         RouterModule.forRoot(
             appRoutes
         ),
-        SharedModule
+        SharedModule,
+        SearchModule
     ],
     providers: [],
     bootstrap: [AppComponent]
