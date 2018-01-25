@@ -3,6 +3,7 @@ import {Observable} from 'rxjs/Observable';
 import {Observer} from 'rxjs/Observer';
 import {Movie} from '../../models/movie';
 import {movieList} from '../examples';
+import {HttpErrorResponse} from '@angular/common/http';
 
 @Injectable()
 export class MovieService {
@@ -32,5 +33,21 @@ export class MovieService {
             return o.complete();
         });
     }
+
+    public searchMoviesByTerm(term): Observable<Movie[]> {
+        const foundMovies = this.movieList.filter((movie: Movie) => {
+            return movie.name.toLocaleLowerCase().includes(term.toLocaleLowerCase());
+        });
+
+        if (foundMovies.length === 0) {
+            return Observable.throw(term);
+        }
+
+        return new Observable((o: Observer<any>) => {
+            o.next(foundMovies);
+            return o.complete();
+        });
+    }
+
 
 }

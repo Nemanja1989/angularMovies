@@ -9,9 +9,13 @@ import {NavbarComponent} from './components/navbar/navbar.component';
 import {MoviesComponent} from './shared/components/movies/movies.component';
 import {SharedModule} from './shared/shared.module';
 import {SearchModule} from './search/search.module';
+import {SearchComponent} from './search/components/search/search.component';
+import {SearchpageComponent} from './search/components/searchpage/searchpage.component';
 
 const appRoutes: Routes = [
-    {path: '', component: MoviesComponent}
+    {path: '', component: MoviesComponent},
+    {path: 'search/', component: MoviesComponent},
+    {path: 'search/:term', component: SearchpageComponent}
 ];
 
 @NgModule({
