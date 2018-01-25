@@ -5,9 +5,7 @@ export class Movie {
     imageUrl: string;
     duration: number;
     releaseDate: string;
-    genres: string;
-
-
+    genres: any[];
 
     constructor( id, name, director, imageUrl, duration, releaseDate, genres ) {
         this.id = id;
